@@ -2,17 +2,17 @@ name: Linting, testing, building
 
 on: 
   push: 
-    branches: [master]
+    branches: [ master ]
   
   pull_request:
-    branches: [master]
+    branches: [ maser ]
 
 jobs: 
   pipeline: 
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [17.x]
+        node-version: [ 17.x ]
 
     steps: 
       - uses: actions/checkout@v2
@@ -31,6 +31,6 @@ jobs:
       - name: unit testing
         run: npm run test:unit
 
-        
+
       
 
